@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { PillCard } from '../components/PillCard';
+import { ViewEditNote } from '../components/ViewEditNote';
 
 // mock data to represent pills the user is currently taking
 const pills = [
@@ -39,6 +40,8 @@ export default function HomeScreen() {
             />
           );
         })}
+
+        <ViewEditNote />
       </ScrollView>
     </View>
   );
