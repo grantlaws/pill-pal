@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { PillCard } from '../components/PillCard';
 import { ViewEditNote } from '../components/ViewEditNote';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 // mock data to represent pills the user is currently taking
 const pills = [
@@ -19,32 +20,36 @@ const pills = [
   },
 ];
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}
-      >
-        <View style={styles.welcomeContainer}>
-          <Text style={styles.welcomeText}>Hello, Jordan!</Text>
-        </View>
+export default class HomeScreen extends React.Component {
+  render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}
+        >
+          <View style={styles.welcomeContainer}>
+            <Text style={styles.welcomeText}>Hello, Jordan!</Text>
+          </View>
 
-        {pills.map(pill => {
-          return (
-            <PillCard
-              key={pill.id}
-              name={pill.name}
-              formattedTimeLeft={pill.formattedTimeLeft}
-              dosage={pill.dosage}
-            />
-          );
-        })}
-
-        <ViewEditNote />
-      </ScrollView>
-    </View>
-  );
+          {pills.map(pill => {
+            return (
+              <PillCard
+                key={pill.id}
+                name={pill.name}
+                formattedTimeLeft={pill.formattedTimeLeft}
+                dosage={pill.dosage}
+              />
+            );
+          })}
+          <TouchableOpacity onPress={() => navigate('TodaysNote')}>
+            <ViewEditNote />
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
+    );
+  }
 }
 
 HomeScreen.navigationOptions = {

@@ -1,18 +1,17 @@
 import React from 'react';
-import { Alert, Button, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
-export function ViewEditNote(props) {
+export function ViewEditNote() {
   return (
     <View style={styles.viewEditNoteContainer}>
-
-      <TouchableOpacity
-          style={styles.viewEditNoteButton}
-          activeOpacity = { .5 }
-          onPress={ () => Alert.alert('Simple Button pressed') } //Temporal, change later
-       >
-
-            <Text style={styles.viewEditNoteText}> View/Edit Today's Note </Text>
-
+      <TouchableOpacity style={styles.viewEditNoteButton} activeOpacity={0.5}>
+        <Text style={styles.viewEditNoteText}> View/Edit Today's Note </Text>
       </TouchableOpacity>
     </View>
   );
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   viewEditNoteButton: {
-    backgroundColor: "#1ac937",
+    backgroundColor: '#1ac937',
     borderRadius: 10,
     marginTop: 10,
     marginBottom: 10,
@@ -39,12 +38,12 @@ const styles = StyleSheet.create({
       android: {
         elevation: 5,
       },
-    })
+    }),
   },
   viewEditNoteText: {
     fontSize: 17,
-    fontWeight: "bold",
-    color: "white",
-    paddingVertical: 10
-  }
+    fontWeight: 'bold',
+    color: 'white',
+    paddingVertical: 10,
+  },
 });
