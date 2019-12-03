@@ -82,6 +82,13 @@ export function PillsLoggedTodayCard(props) {
 }
 
 PillsLoggedTodayCard.propTypes = {
+  /**
+   * The header that is displayed at the top to describe the purpose of the card.
+   */
+  title: PropTypes.string,
+  /**
+   * An array containing the information for the card.
+   */
   infoArray: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

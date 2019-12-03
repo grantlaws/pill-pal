@@ -22,6 +22,21 @@ export function PillCard(props) {
   );
 }
 
+PillCard.propTypes = {
+  /**
+   * The name of the pill to take.
+   */
+  name,
+  /**
+   * The amount of time left before the user needs to take their next medication.
+   */
+  formattedTimeLeft,
+  /**
+   * The quantity of pills to be taken.
+   */
+  dosage,
+};
+
 const styles = StyleSheet.create({
   pillCardInfoContainer: {
     marginTop: 10,

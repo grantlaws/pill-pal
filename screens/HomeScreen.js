@@ -5,7 +5,9 @@ import { PillsLoggedTodayCard } from '../components/PillsLoggedTodayCard';
 import { ViewEditNote } from '../components/ViewEditNote';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-// mock data to represent pills the user is currently taking
+/**
+ * Mock data to represent pills the user is currently taking.
+ */
 const pills = [
   {
     id: 0,
@@ -21,7 +23,9 @@ const pills = [
   },
 ];
 
-// mock data to represent pills the user has logged so far today
+/**
+ * Mock data to represent pills the user has logged so far today.
+ */
 const pillsLoggedToday = [
   {
     id: 0,

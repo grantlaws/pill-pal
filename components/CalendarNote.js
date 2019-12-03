@@ -36,6 +36,29 @@ export function CalendarNote(props) {
   );
 }
 
+CalendarNote.propTypes = {
+  /**
+   * The header that is displayed at the top to indicate what the date is for the selected calendar note.
+   */
+  todaysDate: PropTypes.string,
+  /**
+   * The name and quantity of every type of pill taken on the selected date.
+   */
+  pillsTaken: PropTypes.string,
+  /**
+   * The list of symptoms that the user logged for the selected date.
+   */
+  symptoms: PropTypes.string,
+  /**
+   * The list of feelings that the user logged for the selected date.
+   */
+  feelings: PropTypes.string,
+  /**
+   * Any additional information that the user added for the selected date.
+   */
+  additionalDetails: PropTypes.string,
+};
+
 const styles = StyleSheet.create({
   calendarNoteInfoContainer: {
     marginTop: 10,
