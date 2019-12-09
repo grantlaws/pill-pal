@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
 export function PillCard(props) {
@@ -26,15 +27,15 @@ PillCard.propTypes = {
   /**
    * The name of the pill to take.
    */
-  name,
+  name: PropTypes.string,
   /**
    * The amount of time left before the user needs to take their next medication.
    */
-  formattedTimeLeft,
+  formattedTimeLeft: PropTypes.string,
   /**
    * The quantity of pills to be taken.
    */
-  dosage,
+  dosage: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
