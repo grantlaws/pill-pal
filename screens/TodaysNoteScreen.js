@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { SymptomsFeelings } from '../components/SymptomsFeelings';
+//import { SymptomsFeelings } from '../components/SymptomsFeelings';
 
 const symptomsAndFeelings = {
   symptom1: 'Headache',
